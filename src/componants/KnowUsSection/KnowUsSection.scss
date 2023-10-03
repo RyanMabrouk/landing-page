@@ -1,0 +1,37 @@
+.knowUs_grid_container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto;
+  align-items: center;
+  margin: 3rem 0;
+  padding: 5rem;
+  .right_container {
+    @include flex(column, 1rem);
+    align-items: flex-start;
+    h1 {
+      @include title($blue);
+    }
+    h2 {
+      @include title($yellow, $xs);
+    }
+  }
+  .left_container {
+    align-items: center;
+    justify-self: center;
+    img {
+        position: relative;
+      z-index: 1;
+    }
+    .yt {
+        position: relative;
+      z-index: 2;
+      iframe {
+        border-radius: $medium_radius;
+        margin-bottom: -37rem;
+        margin-left: 3.5rem;
+        height: 24.5rem;
+        width: 44rem;
+      }
+    }
+  }
+}

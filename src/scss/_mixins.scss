@@ -1,0 +1,32 @@
+@mixin flex($direction: row, $gap: 0rem) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  gap: $gap;
+}
+@mixin font($hight: 200%, $wight: $large_wight) {
+  line-height: $hight;
+  letter-spacing: 150%;
+  font-weight: $wight;
+}
+@mixin title($color, $size: $xm) {
+  color: $color;
+  font-size: $size;
+}
+@mixin button($bg, $shadow, $border, $hight: 3.5rem, $width: 15rem) {
+  background-color: $bg;
+  border-radius: $base_radius;
+  cursor: pointer;
+  height: $hight;
+  width: $width;
+  border: 1px solid $border;
+
+  font-size: $s;
+  font-weight: $base_wight * 2;
+  text-decoration: none;
+  line-height: 70%;
+  &:hover {
+    box-shadow: 0px 6px 6px 0px $shadow;
+    transition: all 200ms ease-in-out;
+  }
+}

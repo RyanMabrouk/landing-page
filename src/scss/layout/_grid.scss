@@ -1,0 +1,21 @@
+@use "sass:math";
+
+$grid-columns: 12;
+
+// base layout classes
+.container {
+  width: 100vw;
+  max-width: 92%;
+  margin: 1rem auto;
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+// col classes
+@include xs {
+      box-sizing: border-box;
+      flex-grow: 0;
+}

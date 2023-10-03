@@ -1,0 +1,48 @@
+@use "sass:math";
+
+// importing partials
+@import "variables";
+@import "mixins";
+
+@import "layout/breakpoints";
+@import "layout/grid";
+
+/* reset styles */
+* {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: $myFont, sans-serif;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dotted #efefef;
+}
+
+input[type="button"] {
+  display: none;
+}
+.paragrapgh {
+  font-size: $s;
+  font-weight: $base_wight;
+  width: fit-content;
+}
+/*----------------------------------------*/
+// main scss
+@import "../componants/NavBar/NavBar";
+@import "../componants/Main/Main";
+@import "../componants/Events/Events";
+@import "../componants/KnowUsSection/KnowUsSection";
+@import "../componants/Courses/Courses";
+@import "../componants/Advantages/Advantages"
+/*----------------------------------------*/

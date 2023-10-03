@@ -1,0 +1,35 @@
+// main colors
+//Impoprts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;$base_wight;600;700;800;900&display=swap");
+
+$gradiant_blue:linear-gradient(110deg, #2860D7 -46.05%, #52ABF7 109.69%);
+$darker_blue: #0e3a8e;
+$blue: #2c68da;
+$light_blue: #0e5ef6;
+$lighter_blue: #d6ecff;
+$background_blue: #f6fbff;
+
+$yellow: #febd01;
+$grey: rgba(172, 185, 210, 0.25);
+$grey2 : rgba(139, 199, 255, 0.25);
+$brown:  rgba(254, 189, 1, 0.25);
+
+// Fonts
+$myFont: "Montserrat";
+
+$base_wight: 300;
+$medium_wight:500;
+$large_wight:600;
+$larger_wight: 900;
+
+$base_radius: 0.75rem;
+$medium_radius:2.5rem;
+$large_radius: 4rem;
+
+//sizes
+$s: 1.325rem;
+$xs: $s * 1.15;
+$m: 2.65rem;
+$xm: $m * 1.15;
+$l: 4rem;
+$xl: $l * 1.15;

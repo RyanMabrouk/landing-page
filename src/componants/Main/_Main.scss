@@ -1,0 +1,42 @@
+.main {
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-rows: 30% auto;
+  gap: 6rem;
+  margin-bottom: 22rem;
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 62rem;
+  }
+  .rightDiv {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .leftDiv {
+    @include flex(column, 2rem);
+    @include font;
+    align-items: flex-start;
+    justify-content: center;
+    grid-row: 2;
+    z-index: 2;
+    div {
+      @include flex(column, 2rem);
+      align-items: flex-start;
+      .blue {
+        @include title($blue);
+      }
+      .yellow {
+        @include title($yellow);
+      }
+    }
+    button {
+      @include font;
+      @include button($yellow, $brown, $yellow);
+      color: white;
+    }
+  }
+}
+

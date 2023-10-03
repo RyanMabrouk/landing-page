@@ -1,0 +1,65 @@
+.advantages_grid_container {
+  display: grid;
+  grid-template-columns: 10% 39% 2% 39% 10%;
+  grid-template-rows: auto;
+  margin-top: 10rem;
+  background-color: $background_blue;
+  border-radius: $large_radius;
+  hr {
+    width: 0.5rem;
+    height: 80%;
+    align-self: center;
+    background-color: $lighter_blue;
+    border-radius: $large_radius;
+  }
+  img{
+    margin-top: 2rem;
+  }
+  .thumbs_up{
+    height: 20rem;
+  }
+  .thumbs_down{
+    justify-self: flex-end;
+    height: 11rem;
+  }
+  .left_container {
+    h1 {
+      @include title($blue);
+    }
+  }
+  .right_container {
+    h1 {
+      @include title($yellow);
+    }
+  }
+  .right_container,
+  .left_container {
+    @include flex(column, 3rem);
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 2rem;
+    h1 {
+      @include font(200%, $medium_wight);
+    }
+    .adv_container {
+      display: grid;
+      grid-template-columns: 10% auto;
+      grid-template-rows: 10rem;
+      gap: 1rem;
+      img {
+        margin-top: -0.1rem;
+        width: 3rem;
+      }
+      div {
+        @include font(150%, $base_wight);
+        @include flex(column,1rem);
+        align-items: flex-start;
+        strong {
+          font-size: $s;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
