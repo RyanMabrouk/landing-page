@@ -16,6 +16,8 @@ $grid-columns: 12;
 
 // col classes
 @include xs {
-      box-sizing: border-box;
-      flex-grow: 0;
+  * {
+    box-sizing: border-box;
+    flex-grow: 0;
+  }
 }
