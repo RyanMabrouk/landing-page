@@ -1,11 +1,11 @@
 import React from "react";
 import watch from "../../assets/_Events/watch.svg";
 
-export default function EventElement(props) {
+export default function Card(props) {
   return (
-    <div className="element">
+    <div className="card">
       <img src={props.bg} alt="" />
-      <div className="element_details">
+      <div className="card_details">
         <h3>{props.name}</h3>
         <img src={watch} alt="" />
         <div>

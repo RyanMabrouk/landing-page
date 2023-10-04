@@ -2,29 +2,29 @@
   @include flex(column, 2rem);
   margin-top: -3rem;
   width: 100%;
-  .sub_title {
-    @include font(200%, $medium_wight);
-    @include flex(row, 0.75rem);
-    .previous_price {
-      color: $yellow;
-    }
-    .price {
-      @include title($yellow);
-    }
+}
+.sub_title {
+  @include font(200%, $medium_wight);
+  @include flex(row, 0.75rem);
+  .previous_price {
+    color: $yellow;
   }
-  .btn_container {
-    @include flex(row, 2rem);
-    label {
-      @include button(white, $grey2, $lighter_blue, 1.5rem);
-      @include flex;
-      color: $blue;
-      justify-content: center;
-      box-shadow: 0px 6px 6px 0px $grey2;
-      padding: 1rem;
-    }
-    .checked {
-      background: $gradiant_blue;
-      color: white;
-    }
+  .price {
+    @include title($yellow);
+  }
+}
+.btn_container {
+  @include flex(row, 2rem);
+  label {
+    @include button(white, $grey2, $lighter_blue,2rem);
+    @include flex;
+    color: $blue;
+    justify-content: center;
+    box-shadow: 0px 6px 6px 0px $grey2;
+    padding: 1rem;
+  }
+  .checked {
+    background: $gradiant_blue;
+    color: white;
   }
 }

@@ -3,7 +3,7 @@
   grid-template-columns: 60% 40%;
   grid-template-rows: auto;
   align-items: center;
-  margin: 3rem 0;
+  margin-bottom: 3rem;
   padding: 5rem;
   .right_container {
     @include flex(column, 1rem);
@@ -16,14 +16,15 @@
     }
   }
   .left_container {
-    align-items: center;
     justify-self: center;
+    align-self: center;
+
     img {
-        position: relative;
+      position: relative;
       z-index: 1;
     }
     .yt {
-        position: relative;
+      position: relative;
       z-index: 2;
       iframe {
         border-radius: $medium_radius;
@@ -31,6 +32,31 @@
         margin-left: 3.5rem;
         height: 24.5rem;
         width: 44rem;
+      }
+    }
+  }
+}
+@include xxm{
+  .knowUs_grid_container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 40%;
+    margin-bottom: 10rem;
+    margin-top: -5rem;
+    gap: 1rem;
+    justify-items: center;
+    .right_container{
+      grid-row: 1;
+    }
+    .left_container{
+      img{
+        height: 80vh;
+        width: 80vw;
+        margin: 0 auto;
+      }
+      iframe{
+        display: none;
+        margin: 0 ;
       }
     }
   }

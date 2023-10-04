@@ -1,0 +1,47 @@
+.faq_container {
+  @include flex(column, 2rem);
+  margin-top: 10rem;
+  overflow: hidden;
+  width: 90%;
+  margin: 10rem auto;
+  h2 {
+    @include title($yellow, $m);
+    margin: 2rem 0;
+  }
+  .faq-row-wrapper {
+    .styles_icon-wrapper__2cftw {
+      padding: 0.5rem 1rem !important;
+      .arrow {
+        rotate: 180deg;
+      }
+    }
+    .faq-body {
+      border: 3px solid $lighter_blue;
+      border-radius: $medium_radius;
+      .faq-row {
+        border-bottom: 3px solid $lighter_blue;
+        padding: 1rem 2rem;
+        &:first-child {
+          border-radius: $medium_radius $medium_radius 0 0;
+        }
+        &:last-child {
+          border: transparent;
+          border-radius: 0 0 $medium_radius $medium_radius;
+        }
+        &:has(.expanded) {
+          background-color: $background_blue;
+        }
+        .row-title {
+          color: $blue;
+          font-size: $xs;
+        }
+        .row-content {
+          .row-content-text {
+            @include font(200%, $medium_wight);
+            font-size: $xxs;
+          }
+        }
+      }
+    }
+  }
+}

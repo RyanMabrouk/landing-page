@@ -12,13 +12,13 @@
     background-color: $lighter_blue;
     border-radius: $large_radius;
   }
-  img{
+  img {
     margin-top: 2rem;
   }
-  .thumbs_up{
+  .thumbs_up {
     height: 20rem;
   }
-  .thumbs_down{
+  .thumbs_down {
     justify-self: flex-end;
     height: 11rem;
   }
@@ -39,6 +39,9 @@
     align-items: center;
     margin: 0;
     padding: 2rem;
+    div {
+      justify-self: flex-start;
+    }
     h1 {
       @include font(200%, $medium_wight);
     }
@@ -47,18 +50,58 @@
       grid-template-columns: 10% auto;
       grid-template-rows: 10rem;
       gap: 1rem;
+      width: 100%;
       img {
         margin-top: -0.1rem;
         width: 3rem;
       }
       div {
         @include font(150%, $base_wight);
-        @include flex(column,1rem);
+        @include flex(column, 1rem);
         align-items: flex-start;
         strong {
           font-size: $s;
           font-weight: 500;
         }
+      }
+    }
+  }
+}
+
+@include lg {
+  .advantages_grid_container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 2% auto;
+    align-content: center;
+    gap: 0;
+    hr {
+      width: 80%;
+      height: 0.5rem;
+      justify-self: center;
+    }
+    .thumbs_down,
+    .thumbs_up {
+      display: none;
+    }
+    .adv_container {
+      align-items: center;
+      gap: 0;
+    }
+    .right_container,
+    .left_container {
+      div {
+        width: 80%;
+      }
+    }
+  }
+}
+@include md {
+  .advantages_grid_container {
+    .right_container,
+    .left_container {
+      div {
+        width: 100%;
       }
     }
   }

@@ -3,7 +3,7 @@
   grid-template-columns: 50% auto;
   grid-template-rows: 30% auto;
   gap: 6rem;
-  margin-bottom: 22rem;
+  margin-bottom: 15rem;
   img {
     position: absolute;
     top: 0;
@@ -19,7 +19,6 @@
     @include flex(column, 2rem);
     @include font;
     align-items: flex-start;
-    justify-content: center;
     grid-row: 2;
     z-index: 2;
     div {
@@ -40,3 +39,45 @@
   }
 }
 
+@include lg {
+  .main {
+    grid-template-columns: 80% auto;
+    grid-template-rows: 30% auto;
+    gap: 2rem;
+    .leftDiv {
+      justify-content: flex-start;
+      .paragraph {
+        grid-row: 3;
+        column-span: all;
+      }
+    }
+  }
+}
+$hight: 61rem;
+$w: map-get($breakpoints, "xl");
+@for $i from 1 through 37{
+  @media (max-width: $w) {
+    .main {
+      img {
+        height: $hight;
+      }
+    }
+  }
+  $hight:$hight - 1rem;
+  $w:$w - 20px;
+}
+
+@include md {
+  .main {
+    img {
+      height: 25rem;
+    }
+  }
+}
+@include sm {
+  .main {
+    img {
+      height: 22rem;
+    }
+  }
+}

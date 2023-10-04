@@ -4,7 +4,7 @@ export default function Radio(props) {
   return (
     <div>
       <label
-        className={props.checked? "checked" : ""}
+        className={(props.checked)? "checked" : ""}
         htmlFor={props.id}
       >
         {props.text}

@@ -3,6 +3,7 @@ import React from "react";
 import logo from "../../assets/NavBar/logo.svg";
 import flag from "../../assets/NavBar/flag.svg";
 import vector from "../../assets/NavBar/Vector.svg";
+import menu from "../../assets/NavBar/menu.svg";
 
 import NavBtn from "./NavBtn";
 
@@ -25,6 +26,7 @@ export default function NavBar() {
         <img className="vector" src={vector} alt="" />
         <button className="container">Sign up</button>
       </div>
+      <img className="menu" src={menu} alt="" />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 // main colors
 //Impoprts
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;$base_wight;600;700;800;900&display=swap");
+@import url('https://fonts.cdnfonts.com/css/mont');
 
 $gradiant_blue:linear-gradient(110deg, #2860D7 -46.05%, #52ABF7 109.69%);
 $darker_blue: #0e3a8e;
@@ -8,6 +9,7 @@ $blue: #2c68da;
 $light_blue: #0e5ef6;
 $lighter_blue: #d6ecff;
 $background_blue: #f6fbff;
+$swiper_bullet_blue:#97C1E4;
 
 $yellow: #febd01;
 $grey: rgba(172, 185, 210, 0.25);
@@ -27,6 +29,7 @@ $medium_radius:2.5rem;
 $large_radius: 4rem;
 
 //sizes
+$xxs: 1.1rem;
 $s: 1.325rem;
 $xs: $s * 1.15;
 $m: 2.65rem;
