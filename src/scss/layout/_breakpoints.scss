@@ -47,15 +47,19 @@ $breakpoints: (
     @content;
   }
 }
-
 @mixin xl {
   @media (max-width: map-get($breakpoints, "xl")) {
     @content;
   }
 }
-
+//--------differt min/max combo for xxl---------
 @mixin xxl {
   @media (min-width: map-get($breakpoints, "xxl")) {
+    @content;
+  }
+}
+@mixin xxl_max {
+  @media (max-width: map-get($breakpoints, "xxl")) {
     @content;
   }
 }

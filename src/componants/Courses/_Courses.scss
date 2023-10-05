@@ -1,5 +1,5 @@
 .courses {
-  @include flex(column, 2rem);
+  @include flex(column);
   margin-top: -3rem;
   width: 100%;
 }
@@ -13,10 +13,30 @@
     @include title($yellow);
   }
 }
+//SWIPER--------------------------------------
 .btn_container {
-  @include flex(row, 2rem);
+  justify-self: center;
+  width: fit-content;
+  width: 82vw;
+  padding: 0 2rem;
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper {
+    width: 100%;
+    height: 6rem;
+    margin: 2rem 0;
+  }
   label {
-    @include button(white, $grey2, $lighter_blue,2rem);
+    @include button(white, $grey2, $lighter_blue, 2rem);
     @include flex;
     color: $blue;
     justify-content: center;
@@ -26,5 +46,21 @@
   .checked {
     background: $gradiant_blue;
     color: white;
+  }
+}
+@include xxl {
+  .btn_container {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+}
+//-------------------------------------------------
+@include xxl_max {
+  .btn_container {
+    label {
+      width: 20rem;
+    }
   }
 }

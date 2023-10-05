@@ -1,0 +1,110 @@
+.reviews {
+  @include flex(column);
+  justify-content: center;
+  margin: 5rem 0;
+  h1 {
+    @include title($blue);
+    span {
+      color: $yellow;
+    }
+  }
+  .reviews_container {
+    .review_container {
+      @include flex(column, 2rem);
+      border: 1px solid $lighter_blue;
+      box-shadow: 0px 8px 8px 0px $card_shadow;
+      border-radius: $medium_radius;
+      padding: 2rem;
+      width: 27rem;
+      justify-content: flex-start;
+      .container_top {
+        display: grid;
+        grid-template-columns: 20% auto;
+        justify-content: flex-start;
+        width: 100%;
+        img {
+          align-self: center;
+          width: 90%;
+        }
+        div {
+          padding: 0.5rem;
+          .name {
+            @include font(100%);
+            font-size: $xs;
+            margin: 0.5rem 0;
+          }
+          .job {
+            font-size: $s;
+            font-weight: $base_radius;
+          }
+        }
+      }
+      .container_middle {
+        @include flex(column, 0.5rem);
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: $s;
+        width: 100%;
+      }
+      .container_bottom {
+        @include flex(column);
+        font-size: $s;
+        font-weight: $base_wight;
+        justify-content: flex-start;
+        align-content: flex-start;
+      }
+    }
+  }
+  //SWIPER-----------------------------------------------
+  .reviews_container {
+    justify-self: center;
+    width: fit-content;
+    width: 82vw;
+    padding: 0 2rem;
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .swiper {
+      width: 100%;
+      height: 35rem;
+      margin: 2rem 0;
+    }
+    label {
+      @include button(white, $grey2, $lighter_blue, 2rem);
+      @include flex;
+      color: $blue;
+      justify-content: center;
+      box-shadow: 0px 6px 6px 0px $grey2;
+      padding: 1rem;
+    }
+    .checked {
+      background: $gradiant_blue;
+      color: white;
+    }
+    .swiper-slide-active {
+      .review_container {
+        background-color: $background_blue;
+        width: 35rem;
+        height: 25rem;
+      }
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $blue;
+    }
+    .swiper-pagination-bullet {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+    .swiper-pagination-bullets {
+      margin-bottom: -0.5rem;
+    }
+  }
+  //-----------------------------------------------------
+}

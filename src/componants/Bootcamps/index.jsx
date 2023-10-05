@@ -1,62 +1,67 @@
 import React from "react";
-import BtnHeader from "../Courses/BtnHeader";
-import data from "./btn_data";
+import BtnSwiper from "../Courses/BtnSwiper";
+import data from "./bootcamps_data";
+import btn_data from "../btn_data";
 
-import developer from "../../assets/Bootcamps/developer.svg";
+import backend from "../../assets/Bootcamps/developer.webp";
+import frontend from "../../assets/Bootcamps/frontend.webp";
+import fullstack from "../../assets/Bootcamps/backend.webp";
+
 //import numbers from "../../assets/Bootcamps/numbers.svg";
-import one from "../../assets/Bootcamps/one.svg";
-import two from "../../assets/Bootcamps/two.svg";
-import three from "../../assets/Bootcamps/three.svg";
 
 export default function Bootcamps() {
+  const [selected, setSelected] = React.useState("");
+  console.log(selected + "was selected");
+  let info_array = [];
+  let img = null;
+  if (selected) {
+    info_array =
+      selected === "radio5"
+        ? data.fullstack
+        : selected === "radio6"
+        ? data.frontend
+        : data.backend;
+  } else {
+    info_array = data.backend;
+    console.log(info_array);
+  }
+  const Infos = info_array.map((e, i) => {
+    return (
+      <div className="info">
+        <img src={e.img} alt="" />
+        <div>
+          <h2>{e.title}</h2>
+          <p>{e.paragraph}</p>
+        </div>
+      </div>
+    );
+  });
+
   return (
     <div className="bootcamps_container">
       <h1>Discover Our Bootcamps</h1>
-      <BtnHeader
+      <BtnSwiper
         name="bootcamps"
         sub_title="Unbeatable prices, starting from"
         previous_price="3800"
         price="1699 DT"
-        data={data}
+        data={btn_data}
         last_btn_index={5}
+        initialSlide={1}
+        selected={setSelected}
       />
       <div className="main_content">
-        <img src={developer} alt="" />
-        <div className="info_container">
-          <div className="info">
-            <img src={one} alt="" />
-            <div>
-              <h2>From Week 1 To Week 8</h2>
-              <p>
-                Master HTML/CSS For 7 Captivating Projects In Your Portfolio.
-                Enhance Programming Skills With JavaScript, Algorithms, Data
-                Structures For Dynamic Web Applications.
-              </p>
-            </div>
-          </div>
-          <div className="info">
-            <img src={two} alt="" />
-            <div>
-              <h2>From Week 9 To Week 16</h2>
-              <p>
-                Learn React.Js And Sass To Build Modern Web Applications With
-                Dynamic Functionality And Stylish Designs.
-              </p>
-            </div>
-          </div>
-          <div className="info">
-            <img src={three} alt="" />
-            <div>
-              <h2>From Week 17 To Week 25</h2>
-              <p>
-                Here We Will Learn Backend Fundamentals, Node.Js Basics,
-                Express.Js, RESTful API Design, MongoDB, TypeScript
-                Introduction, SQL, OOP Concepts, Clean Architecture Principles,
-                Nest.Js Framework.
-              </p>
-            </div>
-          </div>
-        </div>
+        <img
+          src={
+            selected === "radio5"
+              ? fullstack
+              : selected === "radio6"
+              ? frontend
+              : backend
+          }
+          alt=""
+        />
+        <div className="info_container">{Infos}</div>
       </div>
     </div>
   );

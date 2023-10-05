@@ -1,7 +1,7 @@
 // import Swiper core and required modules
-import React from "react";
-import { Pagination, A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useState } from "react";
+import { Pagination, Navigation, Virtual } from "swiper/modules";
+import { Swiper } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -9,19 +9,26 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 export default function CustomSwiper(props) {
+
   return (
-    <div className="cards_container">
+    <div
+      className={props.className}
+      onChange={props.onChange ? props.onChange : null}
+    >
       <Swiper
         // install Swiper modules
-        modules={[Pagination]}
+        modules={[Virtual, Pagination, Navigation]}
         spaceBetween={35}
-        slidesPerView={'auto'}
-        pagination={{ clickable: true }}
+        slidesPerView={1}
+        centeredSlides={props.centeredSlides}
+        initialSlide={props.initialSlide?props.initialSlide:0}        //virtual
+        loop={props.loop}
+        navigation={props.navigation}
+        pagination={props.pagination ? { clickable: true } : false}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
+        breakpoints={props.breakpoints}
       >
-        {props.slides}
-        {props.slides}
         {props.slides}
       </Swiper>
     </div>

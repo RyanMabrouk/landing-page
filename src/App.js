@@ -7,6 +7,7 @@ import Courses from "./componants/Courses";
 import Advantages from "./componants/Advantages";
 import Bootcamps from "./componants/Bootcamps";
 import FAQ from "./componants/FAQ";
+import Reviews from "./componants/Reviews";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <Courses />
       <Advantages />
       <Bootcamps />
+      <Reviews />
       <FAQ />
     </div>
   );

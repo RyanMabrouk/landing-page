@@ -36,9 +36,15 @@
   }
 }
 
-
 @include xl {
   .events {
     overflow: scroll;
+  }
+}
+@include md {
+  .events {
+    .btn_arrows_container {
+        display: none;
+    }
   }
 }

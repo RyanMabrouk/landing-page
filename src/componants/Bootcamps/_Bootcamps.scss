@@ -9,7 +9,7 @@
     margin-top: 3rem;
   }
   .bootcamps {
-    @include flex(column, 3rem);
+    @include flex(column);
   }
   .main_content {
     display: grid;

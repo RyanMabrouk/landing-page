@@ -1,15 +1,15 @@
 import React from "react";
 import { SwiperSlide } from "swiper/react";
-import CustomSwiper from "../CustomSwiper";
 
+import CustomSwiper from "../CustomSwiper";
 import Card from "./Card";
-import data from "./events_data";
+import data from "../events_data";
 
 import picture from "../../assets/_Events/picture.svg";
 import arrow_right from "../../assets/_Events/arrow_right.svg";
 import arrow_left from "../../assets/_Events/arrow_left.svg";
-import point from "../../assets/_Events/point.svg";
-import point_light from "../../assets/_Events/point_light.svg";
+//import point from "../../assets/_Events/point.svg";
+//import point_light from "../../assets/_Events/point_light.svg";
 
 export default function Events(props) {
   const Cards = data.map((e) => (
@@ -25,7 +25,29 @@ export default function Events(props) {
 
       {/* cards swiper */}
       <div>
-        <CustomSwiper slides={[Cards]} />
+        <CustomSwiper
+          slides={[Cards]}
+          className="cards_container"
+          pagination={true}
+          navigation={{
+            prevEl: ".prev",
+            nextEl: ".next",
+          }}
+          breakpoints={{
+            320: {
+              slidesPerView: 'auto',
+              spaceBetween: 35,
+            },
+            1850: {
+              slidesPerView: '4',
+              spaceBetween: 35,
+            },
+            2200: {
+              slidesPerView: '5',
+              spaceBetween: 35,
+            }
+          }}
+        />
       </div>
 
       <div className="points_btn_container">

@@ -32,7 +32,7 @@ hr {
   border-top: 1px dotted #efefef;
 }
 
-input[type="button"] {
+input[type="button"],input[type="radio"] {
   display: none;
 }
 .paragrapgh {
@@ -51,4 +51,6 @@ input[type="button"] {
 @import "../componants/Advantages/Advantages";
 @import "../componants/Bootcamps/Bootcamps";
 @import "../componants/FAQ/FAQ";
+@import "../componants/Reviews/Reviews";
+
 /*----------------------------------------*/
