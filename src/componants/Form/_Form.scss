@@ -1,0 +1,209 @@
+.form_container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  width: 100%;
+  height: 100%;
+  background-color: $blue;
+  margin: 5rem 0;
+  img {
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .form {
+    display: grid;
+    grid-template-rows: 25% auto;
+    grid-template-columns: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4rem 8rem;
+    h1 {
+      @include title(white, $m);
+    }
+    h2 {
+      color: $yellow;
+      font-size: $xs;
+    }
+    .form_body {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: 25% 25% 25% 25%;
+      gap: 1rem;
+      label {
+        color: black !important;
+        font-size: $s;
+        font-family: $myFont sans-serif !important;
+      }
+      .MuiInputBase-root {
+        background-color: white;
+        border-radius: $base_radius;
+        height: 5rem;
+      }
+      .email {
+        grid-row: 2;
+        grid-column: 1 / span 2;
+      }
+      .number {
+        grid-row: 3;
+        grid-column: 1 / span 2;
+      }
+      .options {
+        grid-column: 1 / span 2;
+        @include flex(row);
+        align-items: flex-end;
+        justify-content: space-between;
+        button {
+          @include button($yellow, $brown, $yellow, 4rem);
+          color: white;
+        }
+        label {
+          @include button($grey3, transparent, $lighter_blue, 3.5rem, 11rem);
+          border: 3px solid $lighter_blue;
+          margin-left: 0.5rem;
+        }
+        .MuiSvgIcon-root {
+          color: transparent;
+          border: 3px solid $lighter_blue;
+          border-radius: $large_radius;
+        }
+        .Mui-checked {
+          background-color: $yellow;
+          width: 8px;
+          height: 8px;
+          margin: 20px;
+        }
+        .MuiTypography-root {
+          color: white;
+          font-weight: $large_wight;
+        }
+      }
+    }
+  }
+}
+@include xxl_max {
+  .form_container {
+    .form {
+      padding: 1rem 2rem;
+    }
+  }
+}
+@include xl {
+  .form_container {
+    .form {
+      grid-template-rows: 20% auto;
+      .options {
+        align-items: flex-start !important;
+      }
+    }
+  }
+}
+@include xxm {
+  .form_container {
+    display: block;
+    width: 80%;
+    margin: 7rem auto;
+    background-color: white;
+    img {
+      display: none;
+    }
+    .form {
+      display: grid;
+      grid-template-rows: 20% auto;
+      grid-template-columns: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      h1 {
+        color: $blue !important;
+      }
+      .form_body {
+        grid-template-rows: auto auto auto auto auto auto;
+        row-gap: 1rem !important;
+        background-image: url("../../assets/Form/background_img2.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 40rem;
+        border-radius: $medium_radius;
+        padding: 8rem 4rem;
+        gap: 0;
+        .MuiInputBase-root {
+          border-radius: $base_radius;
+          height: 6rem;
+        }
+        .name,
+        .lastname,
+        .email,
+        .number {
+          grid-column: 1 / span 2;
+        }
+        .options {
+          grid-row: 5 / span 2;
+          grid-column: 1 / span 2;
+          display: grid;
+          grid-template-columns: auto auto;
+          grid-template-rows: auto auto;
+          row-gap: 2rem;
+          width: 100%;
+          flex-wrap: nowrap !important;
+          button {
+            grid-row: 2;
+            grid-column: 1 / span 2;
+            justify-self: flex-end;
+            align-self: flex-end;
+            margin-right: 1rem;
+          }
+          .radio_group {
+            grid-column: 1 / span 2;
+            width: 100%;
+            label {
+              width: 45%;
+            }
+            .MuiFormGroup-row {
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include md{
+  .form_container {
+    .form_body{
+      height: fit-content !important;
+      padding: 3rem 2rem !important;
+      .MuiInputBase-root {
+        height: 5rem !important;
+      }
+      .options{
+        row-gap: 1rem !important;
+        label{
+          width: 42% !important;
+        }
+      }
+    }
+  }
+}
+@include sm{
+  .form_container{
+    .form_body{
+      .options{
+        button{
+          justify-self: center !important;
+        }
+      }
+    }
+  }
+}
+@include xsm{
+  .form_container{
+    .form_body{
+      padding: 0.75rem !important;
+      border-radius: $base_radius !important;
+      .MuiInputBase-root {
+        height: 4rem !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.map_container {
+  display: grid;
+  grid-template-columns: 50% auto;
+  background-color: $background_blue;
+  border: 2px dashed $blue;
+  border-radius: $medium_radius;
+  padding: 2rem;
+  width: 85%;
+  height: 30rem;
+  margin: 7rem auto;
+  iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: $medium_radius;
+  }
+  .right_container {
+    display: grid;
+    grid-template-columns: 75% auto;
+    padding: 3rem 2rem;
+    width: 100%;
+    h1 {
+      @include title($blue);
+    }
+    div:has(.paper_plane) {
+      position: relative;
+    }
+    .paper_plane {
+      position: absolute;
+      top: -2rem;
+      right: 3rem;
+    }
+    .main_info {
+      @include flex(column, 4rem);
+      justify-content: flex-start;
+      align-items: flex-start;
+      .main_info_bottom {
+        @include flex(column, 1.5rem);
+        align-items: flex-start;
+        div {
+          @include flex(row, 2rem);
+          p {
+            font-size: $s;
+            font-weight: $base_wight;
+            width: max-content;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include xxm {
+  .map_container {
+    margin-top: 10rem;
+    height: 65rem;
+    grid-template-rows: 50% auto;
+    grid-template-columns: auto;
+    .right_container {
+      display: grid;
+      grid-template-columns: 60% auto;
+    }
+    .left_container{
+        grid-row: 2;
+    }
+  }
+}

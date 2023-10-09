@@ -1,0 +1,72 @@
+.menu_container {
+  position: relative;
+
+  width: 100%;
+  display: grid;
+  grid-template-rows: 20% auto;
+  background-color: white;
+  overflow: hidden;
+  height: 50rem !important;
+  z-index: 3;
+
+  img {
+    height: 3.75rem;
+  }
+  button {
+    @include font;
+    @include button($blue, $grey, $lighter_blue, 3.5rem, 20rem);
+    color: white;
+  }
+  .top_container {
+    position: relative;
+    @include flex();
+    justify-content: space-between;
+    z-index: 3;
+
+    label {
+      position: absolute;
+      top: -7.5rem;
+      right: -5.5rem;
+      @include flex();
+      background: $gradiant_blue;
+      border-radius: 50%;
+      width: 10em;
+      height: 15rem;
+      svg {
+        color: white;
+        margin-top: 7.5rem;
+        margin-left: 3.75rem;
+      }
+    }
+  }
+  .boottom_container {
+    @include flex(column, 2rem);
+    justify-items: center;
+    z-index: 3;
+
+    hr {
+      background-color: $lighter_blue;
+      height: 1px;
+      width: 70%;
+    }
+    .menu_items {
+      @include flex(column, 1.5rem);
+      @include font;
+      width: 30%;
+      font-weight: $base_wight;
+      font-size: $xs;
+      letter-spacing: -0.54px;
+    }
+    .menu_flag {
+      @include flex();
+      font-weight: $base_wight;
+
+      .flag {
+        height: 3rem;
+      }
+      p {
+        font-size: $xs;
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import EventsSwiper from "./CardsSwiper";
+import CardsSwiper from "./CardsSwiper";
 
 export default function Events() {
-  return <EventsSwiper name="Upcoming Events" />;
+  return <CardsSwiper name="Upcoming Events" />;
 }

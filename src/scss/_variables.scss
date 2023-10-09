@@ -14,16 +14,18 @@ $swiper_bullet_blue:#97C1E4;
 $yellow: #febd01;
 $grey: rgba(172, 185, 210, 0.25);
 $grey2 : rgba(139, 199, 255, 0.25);
+$grey3:rgba(255, 255, 255, 0.36);
 $brown:  rgba(254, 189, 1, 0.25);
 
 $card_shadow:  rgba(12, 47, 157, 0.10);
 // Fonts
-$myFont: "Montserrat";
+$myFont: "Mont";
 
+// Font weights ( not that our font Mont has 300/900 only)
 $base_wight: 300;
-$medium_wight:500;
-$large_wight:600;
-$larger_wight: 900;
+$medium_wight:900;/*500*/
+$large_wight:900;/*600*/
+$larger_wight:900;
 
 $base_radius: 0.75rem;
 $medium_radius:2.5rem;

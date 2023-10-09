@@ -38,7 +38,7 @@ export default function Bootcamps() {
   });
 
   return (
-    <div className="bootcamps_container">
+    <div className="bootcamps_container" id="bootcamps_container">
       <h1>Discover Our Bootcamps</h1>
       <BtnSwiper
         name="bootcamps"

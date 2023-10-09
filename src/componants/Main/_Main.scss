@@ -9,13 +9,13 @@
     top: 0;
     right: 0;
     z-index: 1;
-    height: 62rem;
+    height: 53vw;
   }
-  .rightDiv {
+  .right_container {
     grid-column: 2;
     grid-row: 1 / span 2;
   }
-  .leftDiv {
+  .left_container {
     @include flex(column, 2rem);
     @include font;
     align-items: flex-start;
@@ -53,31 +53,30 @@
     }
   }
 }
-$hight: 61rem;
-$w: map-get($breakpoints, "xl");
-@for $i from 1 through 37{
-  @media (max-width: $w) {
-    .main {
-      img {
-        height: $hight;
-      }
-    }
-  }
-  $hight:$hight - 1rem;
-  $w:$w - 20px;
-}
-
-@include md {
+@include xxl {
   .main {
     img {
-      height: 25rem;
+      height: 65rem;
     }
   }
 }
 @include sm {
   .main {
     img {
-      height: 22rem;
+      height: 55vh !important;
+      width: 75vw !important;
+    }
+    .left_container {
+      .blue,
+      .yellow {
+        font-size: $m !important;
+      }
+    }
+  }
+  @include xsm {
+    .main {
+      grid-template-columns: 90% auto;
+      grid-template-rows: 10% auto;
     }
   }
 }

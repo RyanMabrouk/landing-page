@@ -4,7 +4,7 @@ import devs from "../../assets/Main/devs.svg";
 export default function Main() {
   return (
     <main className="main">
-      <div className="leftDiv">
+      <div className="left_container">
         <div>
           <p className="blue">Where</p>
           <p className="yellow">Programing</p>
@@ -16,9 +16,10 @@ export default function Main() {
         </p>
         <button>Discover Courses</button>
       </div>
-      <div className="rightDiv">
+      <div className="right_container">
+        {" "}
+        <img src={devs} alt="" />
       </div>
-      <img src={devs} alt="" />
     </main>
   );
 }

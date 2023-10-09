@@ -40,7 +40,13 @@ input[type="button"],input[type="radio"] {
   font-weight: $base_wight;
   width: fit-content;
 }
+@include xsm{
+  h1{
+    font-size: $m !important;
+  }
+}
 /*----------------------------------------*/
+//Note responsive range (575px-2705px)
 // main scss
 @import "../componants/NavBar/NavBar";
 @import "../componants/Main/Main";
@@ -52,5 +58,7 @@ input[type="button"],input[type="radio"] {
 @import "../componants/Bootcamps/Bootcamps";
 @import "../componants/FAQ/FAQ";
 @import "../componants/Reviews/Reviews";
-
+@import "../componants/Form/Form";
+@import "../componants/Map/Map";
+@import "../componants//Menu/Menu"
 /*----------------------------------------*/

@@ -15,7 +15,7 @@ export default function KnowUsSection() {
     },
   };
   return (
-    <div className="knowUs_grid_container">
+    <div className="knowUs_grid_container" id="knowUs_grid_container">
       <div className="left_container">
         <div className="yt">
           <YouTube

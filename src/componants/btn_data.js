@@ -8,15 +8,15 @@ const data = [
     name: "courses",
   },
   {
-    text: "Back End",
-    name: "courses",
-  },
-  {
     text: "Languages",
     name: "courses",
   },
   {
-    text: "Ux Ui design",
+    text: "Back End",
+    name: "courses",
+  },
+  {
+    text: "Front End",
     name: "courses",
   },
   {

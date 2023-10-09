@@ -1,7 +1,7 @@
 @mixin flex($direction: row, $gap: 0rem) {
-  display: flex;
+  display: flex ;
   flex-direction: $direction;
-  align-items: center;
+  align-items: center ;
   gap: $gap;
 }
 @mixin font($hight: 200%, $wight: $large_wight) {
@@ -22,7 +22,7 @@
   border: 1px solid $border;
 
   font-size: $s;
-  font-weight: $base_wight * 2;
+  font-weight: $large_wight;
   text-decoration: none;
   line-height: 70%;
   &:hover {
@@ -31,3 +31,4 @@
     transition: all 200ms ease-in-out;
   }
 }
+

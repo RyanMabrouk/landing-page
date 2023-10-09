@@ -1,72 +1,106 @@
 .navBar {
-    @include flex;
-    position: sticky;
-    justify-content: space-between;
-    background-color: transparent;
-    margin: 2rem auto;
-    z-index: 2;
+  @include flex;
+  justify-content: space-between;
+  background-color: transparent;
+  margin: 2rem auto;
+  z-index: 2;
+  font-size: $s;
+  img {
+    height: 3.75rem;
+  }
+  .nav_btn {
+    @include font;
+    @include button(transparent, $grey, $lighter_blue, 3rem);
+    margin-right: -2rem;
     color: white;
-    font-size: $s;
-
-    img {
-      height: 3.75rem;
+  }
+  .menu_img {
+    display: none;
+    z-index: 2;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 95%;
+    transform: translateX(0px);
+    transition: transform 0.5s ease-in-out;
+  }
+  .navBtn {
+    &:hover {
+      font-weight: ($large_wight);
     }
-    button {
-      @include font;
-      @include button(transparent, $grey, $lighter_blue, 3rem);
-      margin-right: -2rem;
-    }
-    .menu{
-      display: none;
-    }
-    .navBtn {
-      &:hover {
-        font-weight: ($base_wight + 200);
-      }
-      label {
-        cursor: pointer;
-      }
-    }
-    .navMenu {
-      @include flex(row, 4rem);
-      @include font;
-      font-weight: $base_wight;
-      letter-spacing: -0.54px;
-    }
-    .navFlag {
-      @include flex;
-      font-weight: $base_wight;
-  
-      .flag {
-        height: 3rem;
-      }
-      .vector {
-        height: 1rem;
-        width: 1rem;
-        margin-right: 2rem;
-        margin-left: 0.2rem;
-      }
-      p {
-        font-size: math.div($s, 1.5);
-      }
+    label {
+      cursor: pointer;
     }
   }
-@include xxl{
-    .navBar{
-      .navMenu{
-        margin-left: auto;
-        margin-right: 10rem;
-      }
+  .navMenu {
+    color: white;
+    @include flex(row, 4rem);
+    @include font;
+    font-weight: $base_wight;
+    letter-spacing: -0.54px;
+    z-index: 2;
+  }
+  .navFlag {
+    @include flex;
+    font-weight: $base_wight;
+    z-index: 2;
+    color: white;
+
+    .flag {
+      height: 3rem;
     }
+    .vector {
+      height: 1rem;
+      width: 1rem;
+      margin-right: 2rem;
+      margin-left: 0.2rem;
+    }
+    p {
+      font-size: math.div($s, 1.5);
+    }
+  }
 }
-@include lg{
-  .navBar{
+@include xxl {
+  .navBar {
+    .navMenu {
+      margin-left: auto;
+      margin-right: 10rem;
+    }
+  }
+}
+@include lg {
+  .navBar {
     padding: 0;
-    .navMenu,.navFlag{
+    .navMenu,
+    .navFlag {
       display: none;
     }
-    .menu{
+    .menu_img {
       display: block;
+    }
+  }
+}@include xm{
+  .navBar {
+    img {
+      height: 2.75rem !important;
+    }
+  }
+}
+@include sm {
+  .navBar {
+    img {
+      height: 2.5rem !important;
+    }
+  }
+}
+
+@include xxm {
+  .navBar {
+    .navMenu {
+      margin-right: 5rem;
+      margin-left: auto;
     }
   }
 }
