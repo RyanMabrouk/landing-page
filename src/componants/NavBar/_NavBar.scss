@@ -6,7 +6,7 @@
   z-index: 2;
   font-size: $s;
   img {
-    height: 3.75rem;
+    height: 3.75rem !important;
   }
   .nav_btn {
     @include font;
@@ -66,7 +66,7 @@
   .navBar {
     .navMenu {
       margin-left: auto;
-      margin-right: 10rem;
+      margin-right: 25rem;
     }
   }
 }
@@ -81,10 +81,20 @@
       display: block;
     }
   }
-}@include xm{
+}
+@include xxm {
+  .navBar {
+    .navMenu {
+      margin-right:5rem;
+      margin-left: auto;
+    }
+  }
+}
+
+@include xm {
   .navBar {
     img {
-      height: 2.75rem !important;
+      height: 3rem !important;
     }
   }
 }
@@ -92,15 +102,6 @@
   .navBar {
     img {
       height: 2.5rem !important;
-    }
-  }
-}
-
-@include xxm {
-  .navBar {
-    .navMenu {
-      margin-right: 5rem;
-      margin-left: auto;
     }
   }
 }

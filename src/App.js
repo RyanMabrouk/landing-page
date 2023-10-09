@@ -10,7 +10,6 @@ import FAQ from "./componants/FAQ";
 import Reviews from "./componants/Reviews";
 import Form from "./componants/Form";
 import Map from "./componants/Map";
-import Menu from "./componants/Menu";
 export default function App() {
   return (
     <div>
