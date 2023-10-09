@@ -37,7 +37,9 @@ export default function NavBar() {
         <img src={menu} alt="" />
       </label>
       <input type="button" id="menu" onClick={toggleMenu} />
-      <div className="menu">{Menu === true && <MenuJSX />}</div>
+      <div className={Menu ? "menu menu_visible" : "menu"}>
+        {Menu == true && <MenuJSX />}
+      </div>
     </div>
   );
 }

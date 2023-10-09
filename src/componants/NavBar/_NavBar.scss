@@ -22,9 +22,13 @@
     position: absolute;
     top: 0;
     z-index: 3;
-    width: 95%;
-    transform: translateX(0px);
-    transition: transform 0.5s ease-in-out;
+    width: 97%;
+    transform: translateX(100vw);
+    transition: transform 0.35s ease-in-out;
+    &_visible {
+      transform: translateX(0);
+      transition: transform 0.35s ease-in-out;
+    }
   }
   .navBtn {
     &:hover {
@@ -75,17 +79,17 @@
     padding: 0;
     .navMenu,
     .navFlag {
-      display: none;
+      display: none !important;
     }
     .menu_img {
-      display: block;
+      display: block !important;
     }
   }
 }
 @include xxm {
   .navBar {
     .navMenu {
-      margin-right:5rem;
+      margin-right: 5rem;
       margin-left: auto;
     }
   }
