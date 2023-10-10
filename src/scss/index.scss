@@ -33,7 +33,8 @@ hr {
   border-top: 1px dotted #efefef;
 }
 
-input[type="button"],input[type="radio"] {
+input[type="button"],
+input[type="radio"] {
   display: none;
 }
 .paragrapgh {
@@ -41,13 +42,28 @@ input[type="button"],input[type="radio"] {
   font-weight: $base_wight;
   width: fit-content;
 }
-@include xsm{
-  h1{
+@include xsm {
+  h1 {
     font-size: $m !important;
+  }
+  .paragrapgh {
+    font-size: $xxs;
+  }
+}
+@include xxs {
+  h1 {
+    font-size: $xs !important;
+    text-align: center !important;
+  }
+  h2 {
+    font-size: $s !important;
+  }
+  .paragrapgh {
+    font-size: 0.8rem;
   }
 }
 /*----------------------------------------*/
-//Note responsive range (575px-2705px)
+//Note responsive range (280px-2705px)
 // main scss
 @import "../componants/NavBar/NavBar";
 @import "../componants/Main/Main";
@@ -61,5 +77,4 @@ input[type="button"],input[type="radio"] {
 @import "../componants/Reviews/Reviews";
 @import "../componants/Form/Form";
 @import "../componants/Map/Map";
-@import "../componants//Menu/Menu"
-/*----------------------------------------*/
+@import "../componants//Menu/Menu"; /*----------------------------------------*/

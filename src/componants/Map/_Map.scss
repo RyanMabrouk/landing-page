@@ -1,6 +1,7 @@
 .map_container {
   display: grid;
   grid-template-columns: 50% auto;
+  gap: 2rem;
   background-color: $background_blue;
   border: 2px dashed $blue;
   border-radius: $medium_radius;
@@ -48,7 +49,6 @@
     }
   }
 }
-
 @include xxm {
   .map_container {
     margin-top: 10rem;
@@ -59,8 +59,55 @@
       display: grid;
       grid-template-columns: 60% auto;
     }
-    .left_container{
-        grid-row: 2;
+    .left_container {
+      grid-row: 2;
+    }
+  }
+}
+@include xxs {
+  .map_container {
+    margin-top: 10rem;
+    height: 58rem !important;
+    grid-template-rows: 50% auto;
+    grid-template-columns: auto;
+    padding: 0.75rem;
+    gap: 1rem;
+    iframe {
+      width: 97%;
+      height: 28rem;
+    }
+    .right_container {
+      display: grid;
+      width: 70vw;
+      grid-template-columns: 80% auto;
+      padding: 0;
+      h1 {
+        font-size: $xs !important;
+        margin-top: 1rem;
+      }
+      .paper_plane {
+        width: 60vw;
+        height: 60vh;
+        top: -3rem !important;
+        right: -1rem !important;
+      }
+      .main_info {
+        .main_info_bottom {
+          gap: 1rem;
+          div {
+            gap: 0.5rem;
+            width: 90vw !important;
+          }
+          p {
+            font-size: $xxs !important;
+            width: 50% !important;
+            overflow-wrap: break-word;
+          }
+        }
+      }
+    }
+    .left_container {
+      grid-row: 2;
     }
   }
 }

@@ -10,25 +10,25 @@ import fullstack from "../../assets/Bootcamps/backend.webp";
 //import numbers from "../../assets/Bootcamps/numbers.svg";
 
 export default function Bootcamps() {
-  const [selected, setSelected] = React.useState("");
+  const [selected, setSelected] = React.useState("radio5");
   console.log(selected + "was selected");
   let info_array = [];
-  let img = null;
   if (selected) {
     info_array =
       selected === "radio5"
         ? data.fullstack
         : selected === "radio6"
         ? data.frontend
-        : data.backend;
+        : selected === "radio7"
+        ? data.backend
+        : [];
   } else {
     info_array = data.backend;
-    console.log(info_array);
   }
-  const Infos = info_array.map((e, i) => {
+  const Infos = info_array.map((e) => {
     return (
       <div className="info">
-        <img src={e.img} alt="" />
+        <img src={e.img} alt=""/>
         <div>
           <h2>{e.title}</h2>
           <p>{e.paragraph}</p>
@@ -49,6 +49,7 @@ export default function Bootcamps() {
         last_btn_index={5}
         initialSlide={1}
         selected={setSelected}
+        breakpoints_slidesPerView={1}
       />
       <div className="main_content">
         <img
@@ -57,7 +58,9 @@ export default function Bootcamps() {
               ? fullstack
               : selected === "radio6"
               ? frontend
-              : backend
+              : selected === "radio7"
+              ? backend
+              : fullstack
           }
           alt=""
         />

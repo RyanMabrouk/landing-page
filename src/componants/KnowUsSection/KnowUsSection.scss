@@ -10,6 +10,7 @@
     align-items: flex-start;
     h1 {
       @include title($blue);
+      text-align: left !important;
     }
     h2 {
       @include title($yellow, $xs);
@@ -94,6 +95,7 @@
   .knowUs_grid_container {
     margin-bottom: 1rem;
     gap: 3rem;
+    padding: 1rem;
     .left_container {
       img {
         height: 25rem;
@@ -107,6 +109,14 @@
         top: 1rem !important;
         right: 6rem !important;
       }
+    }
+  }
+}
+@include xxs{
+  .knowUs_grid_container{
+    margin-top: 5rem;
+    iframe,img{
+      display: none;
     }
   }
 }

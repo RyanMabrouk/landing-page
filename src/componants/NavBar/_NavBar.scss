@@ -32,7 +32,7 @@
   }
   .navBtn {
     &:hover {
-      font-weight: ($large_wight);
+      font-weight: ($medium_wight);
     }
     label {
       cursor: pointer;
@@ -106,6 +106,13 @@
   .navBar {
     img {
       height: 2.5rem !important;
+    }
+  }
+}
+@include xxs{
+  .navBar {
+    img {
+      height: 2rem !important;
     }
   }
 }

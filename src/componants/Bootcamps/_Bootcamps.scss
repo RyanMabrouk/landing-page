@@ -7,6 +7,7 @@
   h1 {
     @include title($blue);
     margin-top: 3rem;
+    justify-self: center;
   }
   .bootcamps {
     @include flex(column);
@@ -67,10 +68,37 @@
       h2 {
         @include title($blue, $s);
       }
-      .info {
+      .info_container {
         img {
-          width: 70%;
+          width: 70% !important;
         }
+        div {
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+}
+@include xsm {
+  .bootcamps_container {
+    .btn_container {
+      label {
+        width: 50vw !important;
+      }
+    }
+    .main_content {
+      padding: 0 !important;
+      .info {
+        grid-template-columns: 20% auto !important;
+      }
+    }
+  }
+}
+@include xxs {
+  .bootcamps_container {
+    .main_content {
+      .info_container {
+        font-size: 0.8rem !important;
       }
     }
   }

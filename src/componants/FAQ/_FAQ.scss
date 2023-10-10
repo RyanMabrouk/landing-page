@@ -18,7 +18,7 @@
     .faq-body {
       border: 3px solid $lighter_blue;
       border-radius: $medium_radius;
-      //font-weight: $medium_wight;
+      font-weight: $medium_wight;
       .faq-row {
         border-bottom: 3px solid $lighter_blue;
         padding: 1rem 2rem;
@@ -41,6 +41,20 @@
             @include font(200%, $base_wight);
             font-size: $s;
           }
+        }
+      }
+    }
+  }
+}
+@include xsm {
+  .faq_container {
+    .faq-body {
+      .faq-row {
+        .row-title{
+          font-size: $xxs !important;
+        }
+        .row-content-text{
+          font-size: $xxs !important;
         }
       }
     }

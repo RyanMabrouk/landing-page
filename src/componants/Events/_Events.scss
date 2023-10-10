@@ -8,9 +8,6 @@
     margin: 3rem auto;
     margin-bottom: 4rem;
   }
-  .points {
-    @include flex(row, 0.5rem);
-  }
   .btn_arrows_container {
     @include flex(row, 0.5rem);
     justify-content: flex-end;
@@ -22,17 +19,13 @@
       cursor: pointer;
     }
   }
-  .points_btn_container {
-    @include flex(column, 3rem);
-    margin: 2rem 0;
-    justify-content: flex-end;
-    button {
-      @include font;
-      @include button($yellow, $brown, $yellow, 3.5rem, 17.5rem);
-      color: white;
-      z-index: 2;
-      margin-bottom: 2rem;
-    }
+  button {
+    @include font;
+    @include button($yellow, $brown, $yellow, 3.5rem, 17.5rem);
+    color: white;
+    z-index: 2;
+    margin-bottom: 2rem;
+    margin: 4rem 0;
   }
 }
 
@@ -44,7 +37,15 @@
 @include md {
   .events {
     .btn_arrows_container {
-        display: none;
+      display: none;
+    }
+  }
+}
+@include xxs {
+  .events {
+    button {
+      width: 12.5rem ;
+      margin: 2rem 0;
     }
   }
 }

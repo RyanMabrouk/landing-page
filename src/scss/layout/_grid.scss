@@ -9,11 +9,8 @@
   display: flex;
   flex-flow: row wrap;
 }
-
-// col classes
-@include xs {
-  * {
-    box-sizing: border-box;
-    flex-grow: 0;
+@include xsm{
+  .container{
+    margin: 0.5rem auto;
   }
 }

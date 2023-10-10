@@ -5,31 +5,30 @@
 $myFont: "Mont";
 
 // main colors
-$gradiant_blue:linear-gradient(110deg, #2860D7 -46.05%, #52ABF7 109.69%);
+$gradiant_blue: linear-gradient(110deg, #2860d7 -46.05%, #52abf7 109.69%);
 $darker_blue: #0e3a8e;
 $blue: #2c68da;
 $light_blue: #0e5ef6;
 $lighter_blue: #d6ecff;
 $background_blue: #f6fbff;
-$swiper_bullet_blue:#97C1E4;
+$swiper_bullet_blue: #97c1e4;
 
 $yellow: #febd01;
 $grey: rgba(172, 185, 210, 0.25);
-$grey2 : rgba(139, 199, 255, 0.25);
-$grey3:rgba(255, 255, 255, 0.36);
-$brown:  rgba(254, 189, 1, 0.25);
+$grey2: rgba(139, 199, 255, 0.25);
+$grey3: rgba(255, 255, 255, 0.36);
+$brown: rgba(254, 189, 1, 0.25);
 
-$card_shadow:  rgba(12, 47, 157, 0.10);
-
+$card_shadow: rgba(12, 47, 157, 0.1);
 
 // Font weights ( note that our font Mont has 300/900 only)
 $base_wight: 300;
-$medium_wight:600;/*500*/
-$large_wight:600;/*600*/
-$larger_wight:600;/*900*/
+$medium_wight: bold; /*500*/
+$large_wight: bold; /*600*/
+$larger_wight: 600; /*900*/
 
 $base_radius: 0.75rem;
-$medium_radius:2.5rem;
+$medium_radius: 2.5rem;
 $large_radius: 4rem;
 
 //sizes

@@ -12,7 +12,7 @@ import arrow_left from "../../assets/_Events/arrow_left.svg";
 //import point_light from "../../assets/_Events/point_light.svg";
 
 export default function Events(props) {
-  let cards_data = props.data?props.data:data;
+  let cards_data = props.data ? props.data : data;
   const Cards = cards_data.map((e) => (
     <SwiperSlide>
       <Card name={e.name} bg={picture} content={e.content} />
@@ -23,7 +23,6 @@ export default function Events(props) {
       <h1>{props.name}</h1>
       {/*.  option to add extra html */}
       {props.extraHtml ? <div>{props.extraHtml}</div> : null}
-
       {/* cards swiper */}
       <div>
         <CustomSwiper
@@ -31,11 +30,15 @@ export default function Events(props) {
           className="cards_container"
           pagination={true}
           navigation={{
-            prevEl: ".prev",
-            nextEl: ".next",
+            prevEl: ".arrow_left",
+            nextEl: ".arrow_right",
           }}
           breakpoints={{
-            320: {
+            0:{
+              slidesPerView: "1",
+              spaceBetween: 350,
+            },
+            585: {
               slidesPerView: "auto",
               spaceBetween: 35,
             },
@@ -55,18 +58,17 @@ export default function Events(props) {
         />
       </div>
 
-      <div className="points_btn_container">
-        <button>Get In Touch</button>
-      </div>
+      <button>Get In Touch</button>
       <div className="btn_arrows_container">
         <label htmlFor="arrow_left">
-          <img src={arrow_left} alt="" />
+          <img src={arrow_left} alt="" />{" "}
+          <input type="button" id="arrow_left" className="arrow_left" />
         </label>
-        <input type="button" id="arrow_left" />
+        {/*----------------------------------- */}
         <label htmlFor="arrow_right">
           <img src={arrow_right} alt="" />
         </label>
-        <input type="button" id="arrow_right" />
+        <input type="button" id="arrow_right" className="arrow_right" />
       </div>
     </div>
   );

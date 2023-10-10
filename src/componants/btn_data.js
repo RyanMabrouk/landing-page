@@ -31,5 +31,9 @@ const data = [
     text: "Full Stack Developer",
     name: "bootcamps",
   },
+  /*{
+    text: "Data Science",
+    name: "bootcamps",
+  }*/
 ];
 export default data;

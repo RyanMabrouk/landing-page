@@ -60,23 +60,29 @@
     }
   }
 }
-@include sm {
+@include xsm {
   .main {
-    img {
-      height: 55vh !important;
-      width: 75vw !important;
-    }
+    grid-template-columns: 90% auto;
+    grid-template-rows: 10% auto;
+
     .left_container {
+      div {
+        gap: 0 !important;
+      }
       .blue,
       .yellow {
-        font-size: $m !important;
+        font-size: 2rem !important;
       }
     }
   }
-  @include xsm {
-    .main {
-      grid-template-columns: 90% auto;
-      grid-template-rows: 10% auto;
+}
+@include xxs {
+  .main {
+    margin-bottom: 5rem !important;
+    grid-template-rows: auto;
+    img {
+      height: 45vh !important;
+      width: 72vw !important;
     }
   }
 }

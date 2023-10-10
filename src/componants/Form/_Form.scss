@@ -114,6 +114,7 @@
       align-items: center;
       justify-content: center;
       padding: 0;
+      border-radius: $medium_radius;
       h1 {
         color: $blue !important;
       }
@@ -122,9 +123,9 @@
         row-gap: 1rem !important;
         background-image: url("../../assets/Form/background_img2.png");
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: cover;
         height: 40rem;
-        border-radius: $medium_radius;
+        border-radius: $medium_radius !important;
         padding: 8rem 4rem;
         gap: 0;
         .MuiInputBase-root {
@@ -168,41 +169,75 @@
     }
   }
 }
-@include md{
+@include md {
   .form_container {
-    .form_body{
+    .form_body {
       height: fit-content !important;
       padding: 3rem 2rem !important;
       .MuiInputBase-root {
         height: 5rem !important;
       }
-      .options{
+      .options {
         row-gap: 1rem !important;
-        label{
+        label {
           width: 42% !important;
         }
       }
     }
   }
 }
-@include sm{
-  .form_container{
-    .form_body{
-      .options{
-        button{
+@include sm {
+  .form_container {
+    .form_body {
+      .options {
+        button {
           justify-self: center !important;
         }
       }
     }
   }
 }
-@include xsm{
-  .form_container{
-    .form_body{
+@include xsm {
+  .form_container {
+    h2 {
+      font-size: $xs;
+    }
+    .form_body {
       padding: 0.75rem !important;
       border-radius: $base_radius !important;
       .MuiInputBase-root {
         height: 4rem !important;
+      }
+    }
+  }
+}
+@include xxs {
+  .form_container {
+    width: 95% !important;
+    .form_body {
+      height: 35rem !important;
+      padding:1rem 0 !important;
+      .options {
+        button {
+          grid-row: 3 !important;
+          grid-column: 1 / span 2 !important;
+          justify-self: center;
+          margin-left: 0.5rem;
+        }
+        label {
+          width: 95% !important;
+          margin-top: 0.5rem;
+        }
+      }
+      .MuiInputBase-root {
+        height: 2rem;
+      }
+      .name,
+      .lastname,
+      .email,
+      .number {
+        width: 90% !important;
+        justify-self: center;
       }
     }
   }
