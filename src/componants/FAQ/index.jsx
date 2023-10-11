@@ -8,7 +8,6 @@ const styles = {};
 let icon = <img className="arrow" src={arrow} alt="" />;
 const config = {
   animate: true,
-  arrowIcon: "V",
   tabFocus: true,
   openOnload: 0,
   arrowIcon: icon,

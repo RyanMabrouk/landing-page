@@ -38,7 +38,7 @@ export default function NavBar() {
       </label>
       <input type="button" id="menu" onClick={toggleMenu} />
       <div className={Menu ? "menu menu_visible" : "menu"}>
-        {Menu == true && <MenuJSX />}
+        {Menu === true && <MenuJSX />}
       </div>
     </div>
   );

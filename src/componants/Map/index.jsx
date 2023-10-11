@@ -11,6 +11,7 @@ export default function Map() {
     <div className="map_container">
       <div className="left_container">
         <iframe
+        title="map_iframe"
           width="425"
           height="350"
           src="https://www.openstreetmap.org/export/embed.html?bbox=10.604558587074282%2C35.83264496457421%2C10.611446499824526%2C35.83625463278986&amp;layer=mapnik&amp;marker=35.83444981920979%2C10.608002543449402"

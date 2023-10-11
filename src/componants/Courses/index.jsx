@@ -24,7 +24,7 @@ export default function Courses() {
     case "radio4":
       filtered_data = data.filter((e) => e.categorie === "frontend");
       break;
-    case "":
+    default:
       filtered_data = data;
       break;
   }
