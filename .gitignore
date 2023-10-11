@@ -12,6 +12,8 @@
 /build
 .firebaserc
 firebase.json
+/.firebase
+/.github
 
 # misc
 .DS_Store
