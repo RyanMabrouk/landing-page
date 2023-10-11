@@ -1,6 +1,6 @@
 //Impoprts
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;$base_wight;600;700;800;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;500;600;700;800;900&display=swap');
 // Fonts
 $myFont: "Mont";
 
@@ -22,10 +22,10 @@ $brown: rgba(254, 189, 1, 0.25);
 $card_shadow: rgba(12, 47, 157, 0.1);
 
 // Font weights ( note that our font Mont has 300/900 only)
-$base_wight: 300;
-$medium_wight: bold; /*500*/
-$large_wight: bold; /*600*/
-$larger_wight: 600; /*900*/
+$base_wight: 600;
+$medium_wight: 600; /*400*/
+$large_wight: 800; /*600*/
+$larger_wight: 800; /*900*/
 
 $base_radius: 0.75rem;
 $medium_radius: 2.5rem;

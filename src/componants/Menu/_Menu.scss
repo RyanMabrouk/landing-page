@@ -69,3 +69,12 @@
     }
   }
 }
+@include xsm {
+  .menu_container {
+    .boottom_container {
+      .menu_items {
+        font-size: $xxs !important;
+      }
+    }
+  }
+}

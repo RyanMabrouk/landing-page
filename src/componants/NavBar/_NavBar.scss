@@ -30,14 +30,7 @@
       transition: transform 0.35s ease-in-out;
     }
   }
-  .navBtn {
-    &:hover {
-      font-weight: ($medium_wight);
-    }
-    label {
-      cursor: pointer;
-    }
-  }
+
   .navMenu {
     color: white;
     @include flex(row, 4rem);
@@ -45,6 +38,14 @@
     font-weight: $base_wight;
     letter-spacing: -0.54px;
     z-index: 2;
+  }
+  .navBtn {
+    &:hover {
+      font-weight: ($large_wight);
+    }
+    label {
+      cursor: pointer;
+    }
   }
   .navFlag {
     @include flex;
@@ -109,7 +110,7 @@
     }
   }
 }
-@include xxs{
+@include xxs {
   .navBar {
     img {
       height: 2rem !important;

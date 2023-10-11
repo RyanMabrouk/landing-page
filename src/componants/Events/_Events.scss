@@ -6,7 +6,6 @@
   h1 {
     @include title($blue);
     margin: 3rem auto;
-    margin-bottom: 4rem;
   }
   .btn_arrows_container {
     @include flex(row, 0.5rem);

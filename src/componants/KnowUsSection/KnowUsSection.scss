@@ -62,9 +62,9 @@
       }
       iframe {
         position: absolute;
-        width: 70% !important;
-        height: 26rem !important;
-        top: 13rem !important;
+        width: 70%;
+        height: 26rem;
+        top: 13rem;
       }
     }
   }
@@ -91,9 +91,10 @@
     }
   }
 }
+
 @include sm {
   .knowUs_grid_container {
-    margin-bottom: 1rem;
+    margin: 4rem 0;
     gap: 3rem;
     padding: 1rem;
     .left_container {
@@ -112,11 +113,27 @@
     }
   }
 }
-@include xxs{
-  .knowUs_grid_container{
-    margin-top: 5rem;
-    iframe,img{
-      display: none;
+@include xxs {
+  .knowUs_grid_container {
+    margin: 3rem 0;
+    .left_container {
+      img {
+        height: 15rem !important;
+        width: 15rem !important;
+      }
+      iframe {
+        position: absolute;
+        width: 75% !important ;
+        height: 7rem !important;
+        top: -2rem !important;
+        right: 3rem !important;
+        button {
+          width: 50% !important;
+
+          svg {
+          }
+        }
+      }
     }
   }
 }

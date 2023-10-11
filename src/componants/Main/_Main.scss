@@ -17,13 +17,13 @@
   }
   .left_container {
     @include flex(column, 2rem);
-    @include font;
     align-items: flex-start;
     grid-row: 2;
     z-index: 2;
     div {
       @include flex(column, 2rem);
       align-items: flex-start;
+      @include font(195%);
       .blue {
         @include title($blue);
       }
@@ -81,8 +81,8 @@
     margin-bottom: 5rem !important;
     grid-template-rows: auto;
     img {
-      height: 45vh !important;
-      width: 72vw !important;
+      height: 40vh !important;
+      width: 69vw !important;
     }
   }
 }

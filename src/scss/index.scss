@@ -42,6 +42,9 @@ input[type="radio"] {
   font-weight: $base_wight;
   width: fit-content;
 }
+h1{
+  letter-spacing: -2% !important;
+}
 @include xsm {
   h1 {
     font-size: $m !important;
@@ -57,6 +60,7 @@ input[type="radio"] {
   }
   h2 {
     font-size: $s !important;
+    text-align: center !important;
   }
   .paragrapgh {
     font-size: 0.8rem;
