@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
-import img1 from "../assets/MySlider/img1.jpeg";
-import img2 from "../assets/MySlider/img2.jpeg";
-import img3 from "../assets/MySlider/img3.avif";
+import React, { useEffect, useState } from "react";
 
 import card_img from "../assets/_Events/picture.svg";
 import Card from "./Events/Card";
-import data from "./events_data";
 
-export default function MySwiper() {
+export default function MySwiper(props) {
   //Main logic----------------------------
   useEffect(() => {
     const slider = document.querySelector(".slider");
@@ -37,41 +33,80 @@ export default function MySwiper() {
       const x = e.pageX - slider.offsetLeft;
       const walk = (x - startX) * 3; //scroll-fast
       slider.scrollLeft = scrollLeft - walk;
-      console.log(walk);
     });
-  });
+    slider.scrollLeft = props.navigation
+      ? props.navigation === "right"
+        ? scrollLeft + 400
+        : "left"
+        ? scrollLeft - 400
+        : 0
+      : 0;
+  },[]);
   //------------------------------------------------
-  //test jsx
-  const test_slides = (
-    <>
-      <img class="item" draggable="true" id="slide_1" src={img1} alt="" />
-      <img class="item" draggable="true" id="slide_2" src={img2} alt="" />
-      <img class="item" draggable="true" id="slide_3" src={img3} alt="" />
-    </>
+  //pagination
+  const [slideWidth] = useState(
+    props.numberOfSlides !== "auto" ? 100 / props.numberOfSlides : 20
   );
-  const test_bullets = (
-    <>
-      <a href="#slide_1" content=""></a>
-      <a href="#slide_2" content=""></a>
-      <a href="#slide_3" content=""></a>
-    </>
-  );
-  //importing data
-  const Slides = data.map((e, i) => (
-    <div id={"slide_" + String(i)}>
-      <Card name={e.name} bg={card_img} content={e.content} />
-    </div>
-  ));
-  const Bullets = data.map((e, i) => (
-    <a href={"#slide_" + String(i)} content=""></a>
-  ));
+  const data = props.data;
+  //Cards/Btns
+  let counter = props.numberOfSlides;
+  let id = 0;
+  const Slides =
+    props.type === "card"
+      ? data.map((e) => {
+          const jsx = (
+            <div
+              className="slide"
+              style={{ "flex-basis": slideWidth + "%" }}
+              id={
+                counter === props.numberOfSlides
+                  ? "slide_" + props.name + String(id)
+                  : null
+              }
+            >
+              <Card name={e.name} bg={card_img} content={e.content} />
+            </div>
+          );
+          if (counter === props.numberOfSlides) {
+            counter = 1;
+            id++;
+          } else {
+            counter++;
+          }
+          return jsx;
+        })
+      : props.btn_data;
+  const Bullets =
+    props.type === "card"
+      ? Slides.filter((e) => e.props.id !== null).map((e, i) => {
+          return (
+            <a
+              href={"#slide_" + props.name + String(i)}
+              content=""
+              style={{ "flex-basis": slideWidth + "%" }}
+            ></a>
+          );
+        })
+      : null;
+  //------------------------------------------
+  console.log(props.navigation);
   return (
-    <section class="my_swiper_container">
+    <section
+      class={
+        props.type === "card"
+          ? "my_swiper_container"
+          : "my_swiper_container btn_container"
+      }
+    >
       <div class="slider_wrapper">
-        <div class="slider">
+        <div
+          scrollLeft
+          class="slider"
+          onChange={props.onChange ? props.onChange : null}
+        >
           {Slides}
         </div>
-        <div class="slider_nav">{Bullets}</div>
+        <div class="slider_nav">{Bullets?.length > 1 ? Bullets : null}</div>
       </div>
     </section>
   );

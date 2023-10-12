@@ -10,11 +10,10 @@ import FAQ from "./componants/FAQ";
 import Reviews from "./componants/Reviews";
 import Form from "./componants/Form";
 import Map from "./componants/Map";
-import MySwiper from "./componants/MySwiper";
 
 export default function App() {
   return (
-    <div>
+    <>
       <div className="container">
         <NavBar />
         <Main />
@@ -30,9 +29,6 @@ export default function App() {
       <div className="container">
         <Map />
       </div>
-      <div className="container">
-        <MySwiper />
-      </div>
-    </div>
+    </>
   );
 }

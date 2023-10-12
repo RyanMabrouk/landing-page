@@ -1,49 +1,32 @@
 //SWIPER--------------------------------------
 .btn_container {
   justify-self: center;
-  width: fit-content;
-  width: 82vw;
+  width: 90vw !important;
   padding: 0 2rem;
-  .swiper-slide {
-    text-align: center;
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .radio {
+    label {
+      @include button(white, $grey2, $lighter_blue, 2rem);
+      @include flex;
+      color: $blue;
+      justify-content: center;
+      box-shadow: 0px 6px 6px 0px $grey2;
+      padding: 1rem;
+    }
+    .checked {
+      background: $gradiant_blue;
+      color: white !important;
+    }
   }
-  .swiper {
-    width: 100%;
-    height: 6rem;
-    margin: 2rem 0;
-  }
-  label {
-    @include button(white, $grey2, $lighter_blue, 2rem);
-    @include flex;
-    color: $blue;
-    justify-content: center;
-    box-shadow: 0px 6px 6px 0px $grey2;
-    padding: 1rem;
-  }
-  .checked {
-    background: $gradiant_blue;
-    color: white;
-  }
-  .btn_swiper_arrow_left,
-  .btn_swiper_arrow_right {
-    position: absolute;
-    top: 50%;
-    transform: translatey(-50%);
-    z-index: 10;
-    cursor: pointer;
-    height: 2rem;
-    z-index: 2 !important;
-  }
-  
-  .btn_swiper_arrow_left {
-    left: 0;
-  }
-  .btn_swiper_arrow_right {
-    right: 0;
+  .radio_conatiner {
+    @include flex(row, 1rem);
+    align-content: center;
+    .btn_swiper_arrow_left,
+    .btn_swiper_arrow_right {
+      cursor: pointer !important;
+      img {
+        height: 2.5rem;
+      }
+    }
   }
 }
 @include xm {
@@ -55,34 +38,14 @@
 }
 @include xxl {
   .btn_container {
-    .swiper-button-prev,
-    .swiper-button-next,
-    .btn_swiper_arrow_right,
-    .btn_swiper_arrow_left {
-      display: none;
-    }
-    .radio8 {
+    .btn_swiper_arrow_left,
+    .btn_swiper_arrow_right {
       display: none;
     }
   }
 }
 @include xxl_max {
   .btn_container {
-    label {
-      width: 32vw;
-    }
-    .swiper-slide-next,
-    .swiper-slide-prev {
-      opacity: 0.5;
-      .btn_swiper_arrow_right,
-      .btn_swiper_arrow_left {
-        display: none;
-      }
-    }
-    .btn_swiper_arrow_right,
-    .btn_swiper_arrow_left {
-      display: block;
-    }
     .swiper-slide-active label {
       background: $gradiant_blue;
       color: white;
@@ -90,4 +53,3 @@
   }
 }
 //-------------------------------------------------
-
