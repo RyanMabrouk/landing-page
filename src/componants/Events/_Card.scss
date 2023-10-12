@@ -61,8 +61,8 @@
   }
 }
 @include xxs {
-  .cards_container{
-    .swiper-pagination-bullet{
+  .cards_container {
+    .swiper-pagination-bullet {
       width: 0.4rem;
       height: 0.4rem;
     }
@@ -70,8 +70,15 @@
   .card {
     width: 74vw;
     height: 90%;
-    img{
-      width: 100% !important;
+    .card_img{
+      width: 100%;
+    }
+    .card_details {
+      gap: 1rem;
+      padding: 0 0.5rem;
+      img {
+        width: 100% !important;
+      }
     }
   }
 }

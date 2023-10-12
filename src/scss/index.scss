@@ -3,9 +3,7 @@
 // importing partials
 @import "variables";
 @import "mixins";
-
-@import "layout/breakpoints";
-@import "layout/grid";
+@import "breakpoints";
 
 /* reset styles */
 * {
@@ -37,6 +35,12 @@ input[type="button"],
 input[type="radio"] {
   display: none;
 }
+.container {
+  width: 100vw;
+  max-width: 92%;
+  margin: 1rem auto;
+  box-sizing: border-box;
+}
 .paragrapgh {
   font-size: $s;
   font-weight: $base_wight;
@@ -51,9 +55,13 @@ h1{
   }
   .paragrapgh {
     font-size: $xxs;
+    font-weight: $medium_wight;
   }
 }
 @include xxs {
+  .container{
+    margin: 0.5rem auto;
+  }
   h1 {
     font-size: $xs !important;
     text-align: center !important;

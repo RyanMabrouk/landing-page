@@ -63,6 +63,9 @@
         align-items: flex-start;
         strong {
           font-size: $s;
+          font-weight: $large_wight;
+        }
+        p {
           font-weight: $medium_wight;
         }
       }
@@ -121,7 +124,7 @@
     .left_container,
     .right_container {
       font-size: 0.8rem !important;
-      h1{
+      h1 {
         margin-top: 2rem;
       }
       strong {
@@ -130,7 +133,7 @@
       img {
         height: 2rem;
       }
-      .adv_container{
+      .adv_container {
         gap: 1.5rem;
       }
     }

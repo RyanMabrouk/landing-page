@@ -35,7 +35,7 @@
     color: white;
     @include flex(row, 4rem);
     @include font;
-    font-weight: $base_wight;
+    font-weight: $medium_wight;
     letter-spacing: -0.54px;
     z-index: 2;
   }
@@ -63,7 +63,8 @@
       margin-left: 0.2rem;
     }
     p {
-      font-size: math.div($s, 1.5);
+      font-size: $xxs;
+      font-weight: $medium_wight;
     }
   }
 }
