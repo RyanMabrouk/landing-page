@@ -42,26 +42,36 @@ export default function MySwiper() {
   });
   //------------------------------------------------
   //test jsx
-  const test_jsx = (
-    <div>
+  const test_slides = (
+    <>
       <img class="item" draggable="true" id="slide_1" src={img1} alt="" />
       <img class="item" draggable="true" id="slide_2" src={img2} alt="" />
       <img class="item" draggable="true" id="slide_3" src={img3} alt="" />
-    </div>
+    </>
+  );
+  const test_bullets = (
+    <>
+      <a href="#slide_1" content=""></a>
+      <a href="#slide_2" content=""></a>
+      <a href="#slide_3" content=""></a>
+    </>
   );
   //importing data
-  const Cards = data.map((e) => (
-    <Card name={e.name} bg={card_img} content={e.content} />
+  const Slides = data.map((e, i) => (
+    <div id={"slide_" + String(i)}>
+      <Card name={e.name} bg={card_img} content={e.content} />
+    </div>
+  ));
+  const Bullets = data.map((e, i) => (
+    <a href={"#slide_" + String(i)} content=""></a>
   ));
   return (
     <section class="my_swiper_container">
       <div class="slider_wrapper">
-        <div class="slider">{test_jsx}</div>
-        <div class="slider_nav">
-          <a href="#slide_1" content=""></a>
-          <a href="#slide_2" content=""></a>
-          <a href="#slide_3" content=""></a>
+        <div class="slider">
+          {Slides}
         </div>
+        <div class="slider_nav">{Bullets}</div>
       </div>
     </section>
   );
