@@ -62,7 +62,7 @@
 }
 @include xsm {
   .main {
-    grid-template-columns: 90% auto;
+    grid-template-columns: 75% auto;
     grid-template-rows: 10% auto;
 
     .left_container {
@@ -81,7 +81,7 @@
     margin-bottom: 5rem !important;
     grid-template-rows: auto;
     img {
-      height: 40vh !important;
+      height: 32vh !important;
       width: 69vw !important;
     }
   }

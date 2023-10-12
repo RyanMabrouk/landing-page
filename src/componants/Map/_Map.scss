@@ -93,13 +93,12 @@
       }
       .main_info {
         .main_info_bottom {
-          gap: 1rem;
           div {
             gap: 0.5rem;
             width: 80vw !important;
           }
           p {
-            font-size: $xxs !important;
+            font-size: 0.9rem !important;
             width: 50% !important;
             overflow-wrap: break-word;
           }
