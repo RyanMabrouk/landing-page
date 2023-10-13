@@ -31,18 +31,21 @@ export default function Courses() {
   return (
     <CardsSwiper
       name="Courses"
+      id={"courses_js"}
       data={filtered_data}
       extraHtml={
-        <BtnSwiper
-          name="courses"
-          previous_price="1299"
-          price="799DT"
-          sub_title="Unbeatable prices, starting from"
-          data={btn_data}
-          last_btn_index={0}
-          initialSlide={2}
-          selected={setSelected}
-        />
+        <>
+          <BtnSwiper
+            name="courses"
+            previous_price="1299"
+            price="799DT"
+            sub_title="Unbeatable prices, starting from"
+            data={btn_data}
+            last_btn_index={0}
+            initialSlide={2}
+            selected={setSelected}
+          />
+        </>
       }
     />
   );

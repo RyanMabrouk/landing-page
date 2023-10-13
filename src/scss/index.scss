@@ -46,8 +46,16 @@ input[type="radio"] {
   font-weight: $base_wight;
   width: fit-content;
 }
-h1{
+h1 {
   letter-spacing: -2% !important;
+}
+body {
+  &:has(.menu_visible) {
+    position: fixed;
+  }
+  &:has(.navBtnClicked) {
+    position: relative;
+  }
 }
 @include xsm {
   h1 {
@@ -59,7 +67,7 @@ h1{
   }
 }
 @include xxs {
-  .container{
+  .container {
     margin: 0.5rem auto;
   }
   h1 {
@@ -89,4 +97,5 @@ h1{
 @import "../componants/Reviews/Reviews";
 @import "../componants/Form/Form";
 @import "../componants/Map/Map";
-@import "../componants//Menu/Menu"; /*----------------------------------------*/
+@import "../componants//Menu/Menu";
+ /*----------------------------------------*/

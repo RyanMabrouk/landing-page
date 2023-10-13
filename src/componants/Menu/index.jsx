@@ -6,7 +6,7 @@ import flag from "../../assets/NavBar/flag.svg";
 import CloseIcon from "@mui/icons-material/Close";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export default function Menu() {
+export default function Menu(props) {
   return (
     <div className="menu_container">
       <div className="top_container">
@@ -17,13 +17,25 @@ export default function Menu() {
       </div>
       <div className="boottom_container">
         <div className="menu_items">
-          <NavBtn name="Courses" href="#Courses" />
+          <NavBtn name="Courses" href="#Courses" setMenu={props.setMenu} />
           <hr />
-          <NavBtn name="Bootcamps" href="#bootcamps_container" />
+          <NavBtn
+            name="Bootcamps"
+            href="#bootcamps_container"
+            setMenu={props.setMenu}
+          />
           <hr />
-          <NavBtn name="About" href="#knowUs_grid_container" />
+          <NavBtn
+            name="About"
+            href="#knowUs_grid_container"
+            setMenu={props.setMenu}
+          />
           <hr />
-          <NavBtn name="Contact" href="#form_container" />
+          <NavBtn
+            name="Contact"
+            href="#form_container"
+            setMenu={props.setMenu}
+          />
           <hr />
         </div>
         <div className="menu_flag">

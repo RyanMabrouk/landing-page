@@ -13,7 +13,6 @@ export default function NavBar() {
   function toggleMenu() {
     console.log("menu click");
     setMenu(!Menu);
-    console.log(Menu);
   }
   return (
     <div className="navBar">
@@ -22,7 +21,7 @@ export default function NavBar() {
         {/*}<strong>
           <NavBtn name="Home" />
   </strong>{*/}
-        <NavBtn name="Courses" href="#Courses" />
+        <NavBtn name="Courses" href="#courses_js" />
         <NavBtn name="Bootcamps" href="#bootcamps_container" />
         <NavBtn name="About" href="#knowUs_grid_container" />
         <NavBtn name="Contact" href="#form_container" />
@@ -38,7 +37,7 @@ export default function NavBar() {
       </label>
       <input type="button" id="menu" onClick={toggleMenu} />
       <div className={Menu ? "menu menu_visible" : "menu"}>
-        {Menu === true && <MenuJSX />}
+        {Menu === true && <MenuJSX setMenu={setMenu} />}
       </div>
     </div>
   );

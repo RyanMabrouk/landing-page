@@ -19,7 +19,7 @@ export default function Events(props) {
     </SwiperSlide>
   ));
   return (
-    <div className="events" id={props.name}>
+    <div className="events" id={props.id?props.id:props.name}>
       <h1>{props.name}</h1>
       {/*.  option to add extra html */}
       {props.extraHtml ? <div>{props.extraHtml}</div> : null}
