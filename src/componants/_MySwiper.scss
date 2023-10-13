@@ -37,6 +37,7 @@
         scroll-snap-align: start;
         object-fit: cover;
         justify-content: center;
+        overflow: scroll;
       }
       .btn_slide {
         flex: 1 0 100%;

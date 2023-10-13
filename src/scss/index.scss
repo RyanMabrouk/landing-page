@@ -50,6 +50,9 @@ h1{
   margin: 0 auto;
   box-sizing: border-box;
 }
+body:has(.menu_visible){
+  position: fixed;
+}
 @include xsm {
   h1 {
     font-size: $m !important;
